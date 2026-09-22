@@ -54,7 +54,6 @@ They should NOT need to search through components, pages, CSS, or application lo
 - LinkedIn
 - GitHub
 - Resume
-- Projects URL
 - Website URL
 - Link labels
 - Link visibility
@@ -70,21 +69,21 @@ Use a structure similar to:
 export const siteConfig = {
   profile: {
     name: "Kongkham Luangkhot",
-    previous: "Previously @ RBC • Raptor Integration • Kii Health",
+    previous: ["Previously @ RBC", "Raptor Integration", "Kii Health"],
     education: "Computing Science @ Simon Fraser University",
-    photo: "/assets/profile.jpg"
+    photo: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=320&q=85"
   },
 
   contact: {
-    email: "YOUR_EMAIL",
-    phone: "YOUR_PHONE_NUMBER"
+    email: "kongkham.luangkhot@gmail.com",
+    phone: "+1 (778) 952-3849"
   },
 
   links: [
     {
       id: "linkedin",
       label: "LinkedIn",
-      url: "YOUR_LINKEDIN_URL",
+      url: "https://www.linkedin.com/in/kongkhamlk/",
       icon: "linkedin",
       enabled: true,
       external: true
@@ -92,7 +91,7 @@ export const siteConfig = {
     {
       id: "github",
       label: "GitHub",
-      url: "YOUR_GITHUB_URL",
+      url: "https://github.com/kongkham-lk",
       icon: "github",
       enabled: true,
       external: true
@@ -106,17 +105,9 @@ export const siteConfig = {
       external: false
     },
     {
-      id: "projects",
-      label: "Projects",
-      url: "YOUR_PROJECTS_URL",
-      icon: "code",
-      enabled: true,
-      external: true
-    },
-    {
       id: "email",
       label: "Email",
-      url: "mailto:YOUR_EMAIL",
+      url: "mailto:kongkham.luangkhot@gmail.com",
       icon: "mail",
       enabled: true,
       external: false
@@ -124,7 +115,7 @@ export const siteConfig = {
     {
       id: "phone",
       label: "Phone",
-      url: "tel:YOUR_PHONE_NUMBER",
+      url: "tel:+17789523849",
       icon: "phone",
       enabled: true,
       external: false
@@ -133,13 +124,12 @@ export const siteConfig = {
 
   site: {
     url: "",
-    title: "Kongkham Luangkhot",
-    description: "Personal digital contact card"
+    title: "Kongkham Luangkhot | Contact",
+    description: "A professional digital contact card for Kongkham Luangkhot.",
   },
 
   features: {
     showQrCode: true,
-    showProjects: true,
     showResume: true,
     showPhone: true,
     showEmail: true,
@@ -216,7 +206,6 @@ Do NOT create:
 LinkedInButton
 GitHubButton
 ResumeButton
-ProjectsButton
 EmailButton
 PhoneButton
 ```
@@ -230,7 +219,6 @@ LinkCard
     ├── LinkedIn
     ├── GitHub
     ├── Resume
-    ├── Projects
     ├── Email
     └── Phone
 ```
@@ -293,7 +281,6 @@ Example:
 ```js
 features: {
   showQrCode: true,
-  showProjects: true,
   showResume: true,
   showPhone: true,
   showEmail: true,
@@ -485,9 +472,8 @@ Initial links:
 1. LinkedIn
 2. GitHub
 3. Resume
-4. Projects
-5. Email
-6. Phone
+4. Email
+5. Phone
 
 Each card should include:
 
@@ -545,7 +531,7 @@ Include a dedicated **Phone** link.
 On mobile, clicking it should initiate a phone call using:
 
 ```text
-tel:+1XXXXXXXXXX
+tel:+17789523849
 ```
 
 The phone number should be defined once in configuration.
@@ -561,7 +547,7 @@ Include a dedicated **Email** link.
 Use:
 
 ```text
-mailto:YOUR_EMAIL
+mailto:kongkham.luangkhot@gmail.com
 ```
 
 The email address should come from configuration.
@@ -586,22 +572,7 @@ Prefer opening the resume in a new browser tab where appropriate.
 
 ---
 
-# 13. Projects
-
-Include exactly **ONE Projects destination**.
-
-Do NOT create both:
-
-- Projects button
-- Featured Projects section
-
-The Projects link should point to a separate portfolio/projects page or GitHub/projects destination.
-
-The contact website itself should remain simple.
-
----
-
-# 14. Let's Connect
+# 13. Let's Connect
 
 Include a primary action:
 
@@ -622,7 +593,7 @@ Use the existing configuration.
 
 ---
 
-# 15. No About Me Section
+# 14. No About Me Section
 
 Do NOT create an About Me section.
 
@@ -632,7 +603,7 @@ This website is a contact card, not a traditional portfolio.
 
 ---
 
-# 16. Footer
+# 15. Footer
 
 Do NOT create a large footer.
 
@@ -715,7 +686,6 @@ Page
 │   ├── LinkedIn
 │   ├── GitHub
 │   ├── Resume
-│   ├── Projects
 │   ├── Email
 │   └── Phone
 │
@@ -734,11 +704,10 @@ Do not add unnecessary sections.
 
 Use a modern sans-serif font.
 
-Preferred:
+Current implementation:
 
-- Inter
-- Geist
-- System UI / SF Pro-style system stack
+- Avenir Next
+- Helvetica Neue fallback
 
 Hierarchy:
 
@@ -768,10 +737,9 @@ Use one consistent icon library.
 
 Recommended icons:
 
-- LinkedIn
-- GitHub
+- Briefcase/work icon for LinkedIn
+- Git branch icon for GitHub
 - File/document
-- Code
 - Mail
 - Phone
 - Arrow-up-right / chevron
@@ -1065,7 +1033,6 @@ Email
 LinkedIn URL
 GitHub URL
 Resume URL
-Projects URL
 Website URL
 ```
 
@@ -1077,7 +1044,6 @@ Static UI labels such as:
 LinkedIn
 GitHub
 Resume
-Projects
 Email
 Phone
 Generate QR Code
@@ -1116,6 +1082,8 @@ Use these exact values unless the owner changes them in the configuration:
 ### Previous Experience
 
 **Previously @ RBC • Raptor Integration • Kii Health**
+
+Render each experience phrase as a non-breaking unit so `Raptor Integration` and `Kii Health` move to the next line as complete phrases when needed.
 
 ### Education
 

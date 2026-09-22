@@ -1,0 +1,49 @@
+:root {
+  font-family: 'Avenir Next', 'Helvetica Neue', sans-serif;
+  color: #f1f2eb;
+  background: #101310;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --body: 'Avenir Next', 'Helvetica Neue', sans-serif;
+  --display: 'Avenir Next', 'Helvetica Neue', sans-serif;
+  --text-primary: #f1f2eb;
+  --text-muted: #9ba198;
+  --surface: #181c18;
+  --surface-hover: #20261f;
+  --dialog: #191d19;
+  --button-muted: #171b17;
+  --button-hover: #242a23;
+  --border: #2d342d;
+  --border-strong: #455044;
+  --accent: #b7c98b;
+  --accent-bright: #c8d99d;
+  --accent-soft: rgba(201, 200, 139, 0.11);
+  --button-text: #172014;
+  --focus: #d8e6ad;
+}
+
+:root[data-theme='light'] {
+  color: #1b211d;
+  background: #f4f5ef;
+  --text-primary: #1b211d;
+  --text-muted: #687168;
+  --surface: #ffffff;
+  --surface-hover: #f8faf4;
+  --dialog: #ffffff;
+  --button-muted: #ffffff;
+  --button-hover: #eef2e8;
+  --border: #dce1d7;
+  --border-strong: #bcc7b7;
+  --accent: #657c45;
+  --accent-bright: #789451;
+  --accent-soft: rgba(101, 124, 69, .1);
+  --button-text: #ffffff;
+  --focus: #5d743d;
+}
+
+* { box-sizing: border-box; }
+html { min-width: 320px; background: #101310; transition: background-color 180ms ease; }
+html[data-theme='light'] { background: #f4f5ef; }
+body { margin: 0; min-width: 320px; min-height: 100svh; background: inherit; }
+button, a { font: inherit; }
