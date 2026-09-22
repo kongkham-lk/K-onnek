@@ -12,6 +12,24 @@ dist
 dist-ssr
 *.local
 
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Test and tool caches
+coverage
+.cache
+.eslintcache
+.stylelintcache
+.vite
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
