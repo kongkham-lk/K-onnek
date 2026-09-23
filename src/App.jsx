@@ -76,6 +76,8 @@ function QrCodeModal({ onClose }) {
   const dialogRef = useRef(null)
   const triggerRef = useRef(document.activeElement)
   const qrUrl = siteConfig.site.url || `${window.location.origin}${window.location.pathname}`
+  const isAppleMobile = /iPad|iPhone|iPod/.test(navigator.userAgent)
+    || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
 
   useEffect(() => {
     closeButtonRef.current?.focus()
@@ -95,6 +97,15 @@ function QrCodeModal({ onClose }) {
   }, [onClose, qrUrl])
 
   const downloadQr = () => {
+    if (isAppleMobile) {
+      const imageWindow = window.open('', '_blank')
+      if (imageWindow) {
+        imageWindow.document.write(`<title>QR code</title><img src="${qrData}" alt="QR code for ${qrUrl}" style="max-width:100%;height:auto" />`)
+        imageWindow.document.close()
+      }
+      return
+    }
+
     const link = document.createElement('a')
     link.href = qrData
     link.download = 'kongkham-luangkhot-qr.png'
@@ -110,7 +121,9 @@ function QrCodeModal({ onClose }) {
         <p className="dialog-copy">Keep this card close for an easy introduction.</p>
         <div className="qr-image-wrap">{qrData ? <img src={qrData} alt={`QR code for ${qrUrl}`} /> : <span className="qr-loading">Preparing code...</span>}</div>
         <code className="qr-url">{qrUrl}</code>
-        <button className="primary-button download-button" type="button" onClick={downloadQr} disabled={!qrData}><Download size={17} /> Download QR code</button>
+        <button className="primary-button download-button" type="button" onClick={downloadQr} disabled={!qrData}>
+          <Download size={17} /> {isAppleMobile ? 'Open QR image' : 'Download QR code'}
+        </button>
       </div>
     </div>
   )
