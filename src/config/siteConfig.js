@@ -18,7 +18,7 @@ export const siteConfig = {
     { id: 'phone', label: 'Phone', description: 'Let\'s have a conversation', url: 'tel:+17789523849', icon: 'phone', enabled: true, external: false },
   ],
   site: {
-    url: '',
+    url: 'https://kongkham-lk.github.io/K-onnek/',
     title: 'Kongkham Luangkhot | Contact',
     description: 'A professional digital contact card for Kongkham Luangkhot.',
   },
