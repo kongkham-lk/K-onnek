@@ -71,7 +71,7 @@ export const siteConfig = {
     name: "Kongkham Luangkhot",
     previous: ["Previously @ RBC", "Raptor Integration", "Kii Health"],
     education: "Computing Science @ Simon Fraser University",
-    photo: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=320&q=85"
+    photo: "/assets/profile-pic.jpeg"
   },
 
   contact: {
@@ -350,13 +350,17 @@ The default theme must be **DARK**.
 
 Dark theme:
 
-- Near-black / charcoal background
-- Off-white primary text
-- Muted gray secondary text
-- Slightly lighter dark cards
-- Subtle borders
-- Minimal shadows
-- Comfortable contrast
+- Page background: `#111111`
+- Surface/card and input background: `#1A1A1A`
+- Surface hover: `#222222`
+- Border: `#333333`
+- Primary text: `#F5F5F5`
+- Secondary text: `#A3A3A3`
+- Yellow primary accent: `#EAB308`
+- Yellow hover accent: `#CA8A04`
+- Light yellow accent surface: `#FEF9C3`
+- No navy, dark blue, blue-gray, or blue-tinted backgrounds
+- Minimal shadows and comfortable contrast
 
 ## 5.2 Light Theme
 
@@ -370,6 +374,27 @@ Light theme:
 - Minimal shadows
 
 The light theme should feel like the same design system with different colors.
+
+### Theme Tokens
+
+Define reusable CSS variables for the theme rather than hard-coding colors in components:
+
+```css
+--primary: #EAB308;
+--primary-hover: #CA8A04;
+--primary-light: #FEF9C3;
+--background: #FFFFFF;
+--surface: #F9FAFB;
+--border: #E5E7EB;
+--text-primary: #111827;
+--text-secondary: #6B7280;
+--success: #16A34A;
+--error: #DC2626;
+--warning: #F59E0B;
+--info: #2563EB;
+```
+
+The dark theme may override the neutral tokens with its charcoal values above while retaining the same yellow primary tokens.
 
 ---
 
@@ -977,7 +1002,7 @@ Suggested structure:
 project/
 ├── public/
 │   ├── assets/
-│   │   └── profile.jpg
+│   │   └── profile-pic.jpeg
 │   └── resume.pdf
 │
 ├── src/

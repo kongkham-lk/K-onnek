@@ -41,17 +41,17 @@
 .link-list { display: grid; gap: 10px; margin-top: 34px; }
 .link-card { min-height: 66px; box-sizing: border-box; display: flex; align-items: center; gap: 13px; padding: 10px 15px 10px 12px; color: var(--text-primary); background: var(--surface); border: 1px solid var(--border); border-radius: 12px; text-decoration: none; transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease; animation: rise-in 600ms ease both; }
 .link-card:nth-child(2) { animation-delay: 50ms; }.link-card:nth-child(3) { animation-delay: 100ms; }.link-card:nth-child(4) { animation-delay: 150ms; }.link-card:nth-child(5) { animation-delay: 200ms; }.link-card:nth-child(6) { animation-delay: 250ms; }
-.link-card:hover { transform: translateY(-2px); border-color: var(--accent); background: var(--surface-hover); }
-.link-icon { display: grid; place-items: center; width: 40px; height: 40px; flex: 0 0 auto; color: var(--accent); background: var(--accent-soft); border-radius: 9px; }
+.link-card:hover { transform: translateY(-2px); border-color: var(--primary); background: var(--surface-hover); }
+.link-icon { display: grid; place-items: center; width: 40px; height: 40px; flex: 0 0 auto; color: var(--primary-hover); background: var(--accent-soft); border-radius: 9px; }
 .link-copy { display: grid; gap: 2px; text-align: left; min-width: 0; }
 .link-copy strong { font-size: .91rem; font-weight: 600; }
 .link-copy span { color: var(--text-muted); font-size: .76rem; }
 .link-arrow { margin-left: auto; flex: 0 0 auto; color: var(--text-muted); transition: transform 180ms ease, color 180ms ease; }
-.link-card:hover .link-arrow { color: var(--accent); transform: translate(2px, -2px); }
+.link-card:hover .link-arrow { color: var(--primary-hover); transform: translate(2px, -2px); }
 
 .primary-button, .secondary-button { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; border-radius: 9px; font-size: .84rem; font-weight: 600; text-decoration: none; cursor: pointer; transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease; }
-.primary-button { color: var(--button-text); background: var(--accent); border: 1px solid var(--accent); }
-.primary-button:hover { transform: translateY(-2px); background: var(--accent-bright); }
+.primary-button { color: var(--button-text); background: var(--primary); border: 1px solid var(--primary); }
+.primary-button:hover { transform: translateY(-2px); background: var(--primary-hover); }
 .secondary-button { color: var(--text-primary); background: transparent; border: 1px solid var(--border); }
 .secondary-button:hover { transform: translateY(-2px); background: var(--surface-hover); border-color: var(--border-strong); }
 .connect-button { width: 100%; margin-top: 22px; }
@@ -62,7 +62,7 @@ footer { margin-top: 26px; color: var(--text-muted); font-size: .75rem; text-ali
 .ambient-line { position: absolute; width: 1px; height: 100%; top: 0; background: linear-gradient(transparent, var(--border), transparent); opacity: .45; }
 .ambient-line-one { left: max(20px, calc(50% - 330px)); }.ambient-line-two { right: max(20px, calc(50% - 330px)); }
 
-.modal-backdrop { position: fixed; inset: 0; z-index: 5; display: grid; place-items: center; padding: 20px; background: rgba(5, 7, 5, .76); backdrop-filter: blur(8px); animation: fade-in 180ms ease both; }
+.modal-backdrop { position: fixed; inset: 0; z-index: 5; display: grid; place-items: center; padding: 20px; background: rgba(0, 0, 0, .78); backdrop-filter: blur(8px); animation: fade-in 180ms ease both; }
 .qr-dialog { width: min(100%, 360px); position: relative; box-sizing: border-box; padding: 28px; text-align: center; color: var(--text-primary); background: var(--dialog); border: 1px solid var(--border-strong); border-radius: 14px; box-shadow: 0 24px 70px rgba(0, 0, 0, .28); }
 .modal-close { position: absolute; top: 14px; right: 14px; width: 36px; height: 36px; }
 .dialog-kicker { display: inline-flex; align-items: center; gap: 7px; color: var(--accent); font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
