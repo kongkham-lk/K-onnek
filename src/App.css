@@ -10,7 +10,7 @@
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  padding-top: 58px;
+  padding-top: 28px;
 }
 
 .icon-button {
@@ -79,7 +79,7 @@ footer { margin-top: 26px; color: var(--text-muted); font-size: .75rem; text-ali
 @media (max-width: 520px) {
   .page-shell { padding-inline: 40px; }
   .theme-toggle { top: 18px; right: 16px; }
-  .content-column { padding-top: 54px; }
+  .content-column { padding-top: 28px; }
   .experience { max-width: 340px; }
   .ambient-line { display: none; }
 }
