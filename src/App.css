@@ -23,11 +23,12 @@
   border: 1px solid var(--border);
   border-radius: 50%;
   cursor: pointer;
-  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
 .icon-button:hover { background: var(--button-hover); border-color: var(--border-strong); transform: translateY(-2px); }
 .theme-toggle { position: absolute; top: 24px; right: 24px; }
+.theme-toggle:hover { background: var(--button-hover); border-color: var(--primary); color: var(--primary); }
 
 .profile { text-align: center; animation: rise-in 600ms ease both; }
 .photo-frame { width: 92px; height: 92px; margin: 0 auto 22px; padding: 4px; border: 1px solid var(--border-strong); border-radius: 50%; background: var(--surface); }

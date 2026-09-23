@@ -19,8 +19,8 @@
   --text-muted: var(--text-secondary);
   --surface-hover: #222222;
   --dialog: #1a1a1a;
-  --button-muted: #1a1a1a;
-  --button-hover: #222222;
+  --button-muted: var(--surface);
+  --button-hover: var(--surface-hover);
   --border-strong: #555555;
   --accent: var(--primary);
   --accent-bright: var(--primary-hover);
@@ -47,8 +47,8 @@
   --text-muted: var(--text-secondary);
   --surface-hover: #ffffff;
   --dialog: #ffffff;
-  --button-muted: #ffffff;
-  --button-hover: #fef9c3;
+  --button-muted: var(--surface);
+  --button-hover: var(--surface-hover);
   --border-strong: #9ca3af;
   --accent: var(--primary);
   --accent-bright: var(--primary-hover);
