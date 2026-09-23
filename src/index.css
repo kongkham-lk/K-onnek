@@ -21,6 +21,7 @@
   --dialog: #1a1a1a;
   --button-muted: var(--surface);
   --button-hover: var(--surface-hover);
+  --theme-toggle-bg: #1a1a1a;
   --border-strong: #555555;
   --accent: var(--primary);
   --accent-bright: var(--primary-hover);
@@ -49,6 +50,7 @@
   --dialog: #ffffff;
   --button-muted: var(--surface);
   --button-hover: var(--surface-hover);
+  --theme-toggle-bg: #f3f4f6;
   --border-strong: #9ca3af;
   --accent: var(--primary);
   --accent-bright: var(--primary-hover);

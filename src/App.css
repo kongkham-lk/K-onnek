@@ -27,8 +27,8 @@
 }
 
 .icon-button:hover { background: var(--button-hover); border-color: var(--border-strong); transform: translateY(-2px); }
-.theme-toggle { position: absolute; top: 24px; right: 24px; }
-.theme-toggle:hover { background: var(--button-hover); border-color: var(--primary); color: var(--primary); }
+.theme-toggle { position: absolute; top: 24px; right: 24px; background: var(--theme-toggle-bg); }
+.theme-toggle:hover { background: var(--button-hover); border-color: var(--primary-hover); color: var(--primary-hover); }
 
 .profile { text-align: center; animation: rise-in 600ms ease both; }
 .photo-frame { width: 92px; height: 92px; margin: 0 auto 22px; padding: 4px; border: 1px solid var(--border-strong); border-radius: 50%; background: var(--surface); }
@@ -42,7 +42,7 @@
 .link-list { display: grid; gap: 10px; margin-top: 34px; }
 .link-card { min-height: 66px; box-sizing: border-box; display: flex; align-items: center; gap: 13px; padding: 10px 15px 10px 12px; color: var(--text-primary); background: var(--surface); border: 1px solid var(--border); border-radius: 12px; text-decoration: none; transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease; animation: rise-in 600ms ease both; }
 .link-card:nth-child(2) { animation-delay: 50ms; }.link-card:nth-child(3) { animation-delay: 100ms; }.link-card:nth-child(4) { animation-delay: 150ms; }.link-card:nth-child(5) { animation-delay: 200ms; }.link-card:nth-child(6) { animation-delay: 250ms; }
-.link-card:hover { transform: translateY(-2px); border-color: var(--primary); background: var(--surface-hover); }
+.link-card:hover { transform: translateY(-2px); border-color: var(--primary-hover); background: var(--surface-hover); }
 .link-icon { display: grid; place-items: center; width: 40px; height: 40px; flex: 0 0 auto; color: var(--primary-hover); background: var(--accent-soft); border-radius: 9px; }
 .link-copy { display: grid; gap: 2px; text-align: left; min-width: 0; }
 .link-copy strong { font-size: .91rem; font-weight: 600; }
@@ -54,8 +54,9 @@
 .primary-button { color: var(--button-text); background: var(--primary); border: 1px solid var(--primary); }
 .primary-button:hover { transform: translateY(-2px); background: var(--primary-hover); }
 .secondary-button { color: var(--text-primary); background: transparent; border: 1px solid var(--border); }
-.secondary-button:hover { transform: translateY(-2px); background: var(--surface-hover); border-color: var(--border-strong); }
-.connect-button { width: 100%; margin-top: 22px; }
+.secondary-button:hover { transform: translateY(-2px); background: transparent; border-color: var(--primary-hover); color: var(--primary-hover); }
+.contact-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 22px; }
+.contact-action { width: 100%; }
 .qr-button { width: 100%; margin-top: 11px; }
 button:focus-visible, a:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
 

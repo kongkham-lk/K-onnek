@@ -11,11 +11,11 @@ export const siteConfig = {
     phone: '+1 (778) 952-3849',
   },
   links: [
-    { id: 'linkedin', label: 'LinkedIn', description: 'Connect professionally', url: 'https://www.linkedin.com/in/kongkhamlk/', icon: 'linkedin', enabled: true, external: true },
-    { id: 'github', label: 'GitHub', description: 'See what I am building', url: 'https://github.com/kongkham-lk', icon: 'github', enabled: true, external: true },
-    { id: 'resume', label: 'Resume', description: 'A quick look at my experience', url: 'resume.pdf', icon: 'file', enabled: true, external: false },
     { id: 'email', label: 'Email', description: 'Send me a message', url: 'mailto:kongkham.luangkhot@gmail.com', icon: 'mail', enabled: true, external: false },
     { id: 'phone', label: 'Phone', description: 'Let\'s have a conversation', url: 'tel:+17789523849', icon: 'phone', enabled: true, external: false },
+    { id: 'linkedin', label: 'LinkedIn', description: 'Connect professionally', url: 'https://www.linkedin.com/in/kongkhamlk/', icon: 'linkedin', enabled: true, external: true },
+    { id: 'github', label: 'GitHub', description: 'See what I am building', url: 'https://github.com/kongkham-lk', icon: 'github', enabled: true, external: true },
+    { id: 'resume', label: 'Resume', description: 'A quick look at my experience', url: 'Resume_Kongkham_Luangkhot.pdf', icon: 'file', enabled: true, external: false, openInNewTab: true },
   ],
   site: {
     url: 'https://kongkham-lk.github.io/K-onnek/',

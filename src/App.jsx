@@ -63,9 +63,8 @@ function LinkList() {
   const { links, features } = siteConfig
   const visibleLinks = links.filter((link) => {
     if (!link.enabled) return false
+    if (link.id === 'phone' || link.id === 'email') return false
     if (link.id === 'resume' && !features.showResume) return false
-    if (link.id === 'phone' && !features.showPhone) return false
-    if (link.id === 'email' && !features.showEmail) return false
     return true
   })
   return <div className="link-list">{visibleLinks.map((link) => <LinkCard key={link.id} link={link} />)}</div>
@@ -129,6 +128,7 @@ function App() {
 
   const toggleTheme = () => setTheme((current) => current === 'dark' ? 'light' : 'dark')
   const emailLink = siteConfig.links.find((link) => link.id === 'email')?.url || `mailto:${siteConfig.contact.email}`
+  const phoneLink = siteConfig.links.find((link) => link.id === 'phone')?.url || `tel:${siteConfig.contact.phone}`
 
   return (
     <main className="page-shell">
@@ -138,7 +138,10 @@ function App() {
       <div className="content-column">
         <Profile />
         <LinkList />
-        {siteConfig.features.showLetsConnect && <a className="primary-button connect-button" href={emailLink}><Mail size={18} /> Let&apos;s Connect</a>}
+        {siteConfig.features.showLetsConnect && <div className="contact-actions">
+          {siteConfig.features.showEmail && <a className="primary-button contact-action" href={emailLink}><Mail size={18} /> Email</a>}
+          {siteConfig.features.showPhone && <a className="secondary-button contact-action" href={phoneLink}><Phone size={18} /> Call</a>}
+        </div>}
         {siteConfig.features.showQrCode && <button className="secondary-button qr-button" type="button" onClick={() => setShowQr(true)}><QrCode size={17} /> Generate QR code</button>}
         {siteConfig.features.showFooter && <footer>© 2026 {siteConfig.profile.name}</footer>}
       </div>
