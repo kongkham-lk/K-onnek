@@ -3,7 +3,7 @@ export const siteConfig = {
     name: 'Kongkham Luangkhot',
     previous: ['Previously @ RBC', 'Raptor Integration', 'Kii Health'],
     education: 'Computing Science @ Simon Fraser University',
-    photo: '/assets/profile-pic.jpeg',
+    photo: 'assets/profile-pic.jpeg',
     photoAlt: 'Portrait of Kongkham Luangkhot',
   },
   contact: {
@@ -13,7 +13,7 @@ export const siteConfig = {
   links: [
     { id: 'linkedin', label: 'LinkedIn', description: 'Connect professionally', url: 'https://www.linkedin.com/in/kongkhamlk/', icon: 'linkedin', enabled: true, external: true },
     { id: 'github', label: 'GitHub', description: 'See what I am building', url: 'https://github.com/kongkham-lk', icon: 'github', enabled: true, external: true },
-    { id: 'resume', label: 'Resume', description: 'A quick look at my experience', url: '/resume.pdf', icon: 'file', enabled: true, external: false },
+    { id: 'resume', label: 'Resume', description: 'A quick look at my experience', url: 'resume.pdf', icon: 'file', enabled: true, external: false },
     { id: 'email', label: 'Email', description: 'Send me a message', url: 'mailto:kongkham.luangkhot@gmail.com', icon: 'mail', enabled: true, external: false },
     { id: 'phone', label: 'Phone', description: 'Let\'s have a conversation', url: 'tel:+17789523849', icon: 'phone', enabled: true, external: false },
   ],
