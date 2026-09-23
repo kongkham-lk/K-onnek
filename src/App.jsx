@@ -276,9 +276,9 @@ function QrCodeModal({ onClose, onOpenQrImage }) {
           )}
         </div>
 
-        <code className="qr-url">
+        {/* <code className="qr-url">
           {qrUrl}
-        </code>
+        </code> */}
 
         <button
           className="primary-button download-button"
