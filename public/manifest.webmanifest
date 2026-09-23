@@ -1,0 +1,16 @@
+{
+  "name": "Kongkham Luangkhot Contact Card",
+  "short_name": "Kongkham Contact",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#111111",
+  "icons": [
+    {
+      "src": "./favicon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
